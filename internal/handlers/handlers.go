@@ -12,6 +12,7 @@ import (
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
+	w.WriteHeader(http.StatusOK)
 	http.ServeFile(w, r, "../index.html")
 }
 
